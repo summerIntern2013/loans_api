@@ -3,11 +3,14 @@ import mongoose from 'mongoose';
 const { default: mongoose } = require("mongoose");
 
 const paymentSchema = mongoose.Schema({
-    paymentName: String,
-    paymentType: String,
-    paymentAmount: String,
-    paymentIssueDate: Date,
-    paymentStatus: String
+    paymentId: Number,
+    customerId: Number,
+    customerName: String,
+    amount: Number,
+    tax: Number,
+    mode: String,
+    date: Date,
+    notes: String
 })
 
 const paymentModel = mongoose.model( 'Payment', paymentSchema);

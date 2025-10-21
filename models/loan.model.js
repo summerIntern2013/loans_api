@@ -3,10 +3,13 @@ import mongoose from 'mongoose';
 const { default: mongoose } = require("mongoose");
 
 const loanSchema = mongoose.Schema({
-    loanName: String,
+    loanId: String,
+    customerName: String,
     loanType: String,
-    loanAmount: String,
-    loanIssueDate: Date,
+    installments: String,
+    roi: Number,
+    totalAmount: Number,
+    pendingAmount: Number,
     loanStatus: String
 })
 
